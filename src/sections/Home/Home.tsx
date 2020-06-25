@@ -1,14 +1,16 @@
 import React  from 'react'; 
-import Header from '../Header/Header';
 import BannerHero from '../BannerHero/BannerHero';
+import Services from '../Services/Services';
 import SocialIcons from '../../components/SocialIcons/SocialIcons';
+import Partners from '../Partners/Partners';
 
 const Home = () => {
     return(
         <div>
-            <Header/>
             <BannerHero/>
-            <SocialIcons/>
+            <Services/>
+            <Partners/>
+            <SocialIcons color="#3C3B3B"/>
         </div>
     )
 }

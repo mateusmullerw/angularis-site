@@ -5,13 +5,14 @@ import InstagramIcon from '@material-ui/icons/Instagram';
 import TwitterIcon from '@material-ui/icons/Twitter';
 import FacebookIcon from '@material-ui/icons/Facebook';
 
-const SocialIcons = () => {
+const SocialIcons = (props: any) => {
+
     return (
         <div className="socialIcons"> 
-            <LinkedInIcon className="socialIcons__icon"/>
-            <InstagramIcon className="socialIcons__icon"/>
-            <TwitterIcon className="socialIcons__icon"/>
-            <FacebookIcon className="socialIcons__icon"/>
+            <LinkedInIcon style={{color: props.color}} className="socialIcons__icon"/>
+            <InstagramIcon style={{color: props.color}} className="socialIcons__icon"/>
+            <TwitterIcon  style={{color: props.color}} className="socialIcons__icon"/>
+            <FacebookIcon style={{color: props.color}} className="socialIcons__icon"/>
         </div>
     )
 }

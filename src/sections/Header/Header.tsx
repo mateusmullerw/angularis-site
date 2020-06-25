@@ -1,10 +1,11 @@
 import React, { useState, useEffect, useRef } from 'react'; 
 import './Header.scss';
 import LogoPreto from '../../assets/preto.svg';
+import LogoBranco from '../../assets/branco.svg'
 import MenuIcon from '@material-ui/icons/Menu';
 import CloseIcon from '@material-ui/icons/Close';
 
-const Header = () => {
+const Header = (props: {black: boolean}) => {
 
     const [isMobile, setMobile] = useState(false);
     const [open, setOpen] = useState(false);
@@ -30,16 +31,20 @@ const Header = () => {
         <>
        
         <div className="header" ref={rootRef}>
-            <img className="header__logo"  src={LogoPreto} alt="Logo"/>
+
+            { props.black ? 
+            ( <img className="header__logo"  src={LogoPreto} alt="Logo"/>) : 
+            ( <img className="header__logo"  src={LogoBranco} alt="LogoBranco"/>)}
+
 
             {!isMobile ? 
                 
                 (
                     <ul className="header__menu">
-                        <li className="header__menu--item">Serviços</li>
-                        <li className="header__menu--item">Parceiros</li>
-                        <li className="header__menu--item">Sobre nós</li>
-                        <li className="header__menu--item">Time</li>
+                        <li style={{color: props.black ? '#3C3B3B' : '#FFFFFF'}} className="header__menu--item">Serviços</li>
+                        <li style={{color: props.black ? '#3C3B3B' : '#FFFFFF'}} className="header__menu--item">Parceiros</li>
+                        <li style={{color: props.black ? '#3C3B3B' : '#FFFFFF'}} className="header__menu--item">Sobre nós</li>
+                        <li style={{color: props.black ? '#3C3B3B' : '#FFFFFF'}} className="header__menu--item">Time</li>
                     </ul>
                 ) : 
 
