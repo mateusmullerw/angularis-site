@@ -1,12 +1,9 @@
 import React from 'react';
 import './BannerHero.scss';
-import Header from '../Header/Header';
-import SocialIcons from '../../components/SocialIcons/SocialIcons';
 
 const BannerHero = () => {
     return(
         <>
-            <Header black/>
             <div className="bannerHero">
 
                 <div className="bannerHero__text">

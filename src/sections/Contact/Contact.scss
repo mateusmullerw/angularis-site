@@ -1,0 +1,34 @@
+.contact {
+    height: 100vh;
+    background: url('../../assets/contato.png') #F06F62;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+    padding: 0 200px;
+
+    &__title {
+        flex: 1 auto;
+        & h1 {
+            font-family: 'Oswald';
+            font-size: 5.3rem;
+            width: 0;
+            color: #3C3B3B;
+            margin:0;
+            padding:0;
+        }
+
+        & p {
+            font-family: 'Lato';
+            font-size: 1.3rem;
+            color: #3C3B3B;
+        }
+    }
+
+    &__form {
+        flex: 1 auto;
+    }
+}

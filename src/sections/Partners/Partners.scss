@@ -1,7 +1,62 @@
-.partners {
-    height: 100vh;
-    background: url('../../assets/parceiros.png') #4BA5AE;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
+@media screen and (min-width: 0px) {
+    .partners {
+        height: auto;
+        background: url('../../assets/parceiros.png') #4BA5AE;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    
+        &__title {
+            margin: 25px;
+            & h1 {
+                font-family: 'Oswald';
+                font-size: 3.3rem;
+                margin: 0;
+                padding: 0;
+            }
+        }
+    
+        &__list {
+            list-style: none;
+            margin: 25px;
+            padding:0;
+
+            &--item {
+                & img {
+                    width: 100px;
+                }    
+    
+                & p {
+                    font-family: 'Lato';
+                    font-size: 1.1rem;
+                }
+            
+            }
+        }
+    }
 }
+
+@media screen and (min-width: 800px) {
+    .partners {
+        height: 100vh;
+        display: flex;
+        flex-direction: row;
+
+        &__title {
+            margin-left: 250px;
+            & h1 {
+                font-family: 'Oswald';
+                font-size: 5.3rem;
+                margin: 0;
+                padding: 0;
+            }
+        }
+    }
+
+   
+}
+

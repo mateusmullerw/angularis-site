@@ -50,7 +50,7 @@ const Header = (props: {black: boolean}) => {
 
                 (
                     <div className="header__menu-mobile">
-                        <MenuIcon id="btn-toggle" className="header__menu-mobile__icon" fontSize="large" onClick={toggleMenu} />
+                        <MenuIcon style={{color: '#FFF'}} id="btn-toggle" className="header__menu-mobile__icon" fontSize="large" onClick={toggleMenu} />
                     </div>
                 )
                 

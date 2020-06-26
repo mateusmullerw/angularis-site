@@ -1,7 +1,5 @@
 import React from 'react'; 
 import './Services.scss'; 
-import Header from '../Header/Header';
-import SocialIcons from '../../components/SocialIcons/SocialIcons';
 import DashboardIcon from '../../assets/icons/dashboard_1x.png';
 import SupportIcon from '../../assets/icons/headphone-alt_1x.png';
 import ProjectsIcon from '../../assets/icons/rocket_1x.png';
@@ -13,7 +11,6 @@ import DevIcon from '../../assets/icons/code_1x.png';
 const Services = () => {
     return (
         <>
-        <Header black={false}/>
         <div className="services"> 
 
             <div className="services__title">
