@@ -10,7 +10,7 @@ import SocialIcons from '../../components/SocialIcons/SocialIcons';
 
 const Home = () => {
     return(
-        <div>
+        <div style={{overflowX: "hidden"}}>
             <Header black={false}/>
             <BannerHero/>
             <Services/>

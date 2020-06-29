@@ -33,6 +33,7 @@
                 & p {
                     font-family: 'Lato';
                     font-size: 1.1rem;
+                    width: 90%;
                 }
             
             }
@@ -40,14 +41,26 @@
     }
 }
 
+@media screen and (min-width: 700px) {
+
+    .partners {
+
+        &__list {
+            margin-left: 128px;
+        }
+    }
+
+}
+
+
 @media screen and (min-width: 800px) {
     .partners {
-        height: 100vh;
         display: flex;
         flex-direction: row;
+        padding: 100px 150px;
 
         &__title {
-            margin-left: 250px;
+            margin-left: 150px;
             & h1 {
                 font-family: 'Oswald';
                 font-size: 5.3rem;
@@ -55,6 +68,8 @@
                 padding: 0;
             }
         }
+
+       
     }
 
    

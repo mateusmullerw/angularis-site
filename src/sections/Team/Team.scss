@@ -1,16 +1,15 @@
 @media screen and (min-width: 0px) {
     .team {
         background: #3C3B3B;
-        // height: auto;
         display: flex;
         flex-direction: column;
-        
+        // padding: 100px 0;
     
         &__carousel {
             padding: 60px;
     
             &--item {
-                width: 265px;
+                // width: 265px;
                 height: 600px;
     
                 & img {
@@ -19,8 +18,9 @@
                     object-fit: cover;
                     filter: grayscale(100%);
                     position: absolute;
+                    // z-index: -1;
     
-                    &:hover {
+                    &:hover{
                         filter:grayscale(0%);
                     }
 
@@ -32,13 +32,13 @@
                 &-detail {
                     position: absolute;
                     background: #F06F62;
-                    box-shadow: 0px 20px 0px #3B3B3B, 20px 0px 0px #3B3B3B, 20px 20px 0px #3B3B3B;
-                    width: 360px;
+                    box-shadow: 0px 20px 0px #3C3B3B, 20px 0px 0px #3C3B3B, 20px 20px 0px #3C3B3B;
                     padding: 20px 30px;
                     bottom: -36px;
                     left: 83px;
                     display: none;
-                    
+                    z-index: 1;
+
                     & h1 {
                         font-family: 'Oswald';
                         font-size: 2.2rem;
@@ -54,12 +54,11 @@
     
         &__title {
             font-family: 'Oswald';
-            font-size: 10rem;
+            font-size: 5rem;
             color: #F06F62;
             text-align: right;
             padding-right: 66px;
-            margin:0;
-           
+            margin-top: -98px;
         }
     
     }
@@ -68,6 +67,17 @@
 
 @media screen and (min-width: 1024px) {
     .team {
-        // height: 1;
+
+        &__title {
+            font-size: 10rem;
+        }
     }
+}
+
+.react-multi-carousel-list  {
+    height: 800px;
+}
+
+.react-multi-carousel-item {
+    transform-style: flat !important;
 }
