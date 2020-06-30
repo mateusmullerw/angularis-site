@@ -4,6 +4,7 @@ import LogoPreto from '../../assets/preto.svg';
 import LogoBranco from '../../assets/branco.svg'
 import MenuIcon from '@material-ui/icons/Menu';
 import CloseIcon from '@material-ui/icons/Close';
+import { Link } from 'react-scroll';
 
 const Header = (props: {black: boolean}) => {
 
@@ -41,10 +42,19 @@ const Header = (props: {black: boolean}) => {
                 
                 (
                     <ul className="header__menu">
-                        <li style={{color: props.black ? '#3C3B3B' : '#FFFFFF'}} className="header__menu--item">Serviços</li>
-                        <li style={{color: props.black ? '#3C3B3B' : '#FFFFFF'}} className="header__menu--item">Parceiros</li>
-                        <li style={{color: props.black ? '#3C3B3B' : '#FFFFFF'}} className="header__menu--item">Sobre nós</li>
-                        <li style={{color: props.black ? '#3C3B3B' : '#FFFFFF'}} className="header__menu--item">Time</li>
+                        <Link to="services" spy={true} smooth={true} duration={500}>
+                            <li style={{color: props.black ? '#3C3B3B' : '#FFFFFF'}} className="header__menu--item">Serviços</li>
+                        </Link>
+                        <Link to="partners" spy={true} smooth={true} duration={500}>
+                            <li style={{color: props.black ? '#3C3B3B' : '#FFFFFF'}} className="header__menu--item">Parceiros</li>
+                        </Link>
+                        <Link to="team" spy={true} smooth={true} duration={500}>
+                         <li style={{color: props.black ? '#3C3B3B' : '#FFFFFF'}} className="header__menu--item">Time</li>
+                        </Link>
+                        <Link to="contact" spy={true} smooth={true} duration={500}>
+                            <li style={{color: props.black ? '#3C3B3B' : '#FFFFFF'}} className="header__menu--item">Contato</li>
+                        </Link>
+                        
                     </ul>
                 ) : 
 
@@ -62,10 +72,19 @@ const Header = (props: {black: boolean}) => {
                 <CloseIcon className="header__menu-mobile__icon" fontSize="large" onClick={toggleMenu}/>
             </div>    
             <ul id="menu-mobile" className="header__menu-mobile__list">
-                <li className="header__menu-mobile--item">Serviços</li>
-                <li className="header__menu-mobile--item">Parceiros</li>
-                <li className="header__menu-mobile--item">Sobre nós</li>
-                <li className="header__menu-mobile--item">Time</li>
+
+                        <Link to="services" spy={true} smooth={true} duration={500}>
+                            <li className="header__menu-mobile--item">Serviços</li>
+                        </Link>
+                        <Link to="partners" spy={true} smooth={true} duration={500}>
+                             <li className="header__menu-mobile--item">Parceiros</li>
+                        </Link>
+                        <Link to="team" spy={true} smooth={true} duration={500}>
+                            <li className="header__menu-mobile--item">Time</li>
+                        </Link>
+                        <Link to="contact" spy={true} smooth={true} duration={500}>
+                             <li className="header__menu-mobile--item">Contato</li>
+                        </Link>    
              </ul>
         </div>
         </>

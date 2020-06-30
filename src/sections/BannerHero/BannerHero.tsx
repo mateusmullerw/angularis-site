@@ -1,10 +1,10 @@
 import React from 'react';
 import './BannerHero.scss';
 
-const BannerHero = () => {
+const BannerHero = React.forwardRef<HTMLDivElement>((props, ref) => {
     return(
         <>
-            <div className="bannerHero">
+            <div ref={ref} className="bannerHero" id="bannerHero">
 
                 <div className="bannerHero__text">
                     <h1 className="bannerHero__title">DESENVOLVEMOS SONHOS</h1>
@@ -17,6 +17,6 @@ const BannerHero = () => {
            
         </>
     )
-}
+});
 
 export default BannerHero;

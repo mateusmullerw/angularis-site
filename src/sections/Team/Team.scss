@@ -26,6 +26,8 @@
 
                     &:hover + .team__carousel--item-detail {
                         display: block;
+                        -webkit-animation: fadeIn 2s;
+                        animation: fadeIn 2s;
                     }
                 }
 
@@ -38,6 +40,7 @@
                     left: 83px;
                     display: none;
                     z-index: 1;
+                  
 
                     & h1 {
                         font-family: 'Oswald';
@@ -80,4 +83,13 @@
 
 .react-multi-carousel-item {
     transform-style: flat !important;
+}
+
+@-webkit-keyframes fadeIn {
+    from { opacity: 0; }
+      to { opacity: 1; }
+}
+@keyframes fadeIn {
+    from { opacity: 0; }
+      to { opacity: 1; }
 }

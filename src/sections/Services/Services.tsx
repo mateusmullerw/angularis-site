@@ -8,10 +8,10 @@ import UXUIcon from '../../assets/icons/ux_1x.png';
 import DevIcon from '../../assets/icons/code_1x.png';
 
 
-const Services = () => {
+const Services = React.forwardRef<HTMLDivElement>((props, ref) => {
     return (
         <>
-        <div className="services"> 
+        <div ref={ref} className="services" id="services"> 
 
             <div className="services__title">
                 <h1 style={{color: '#FFFFFF' }}>Tudo que você precisa para sua </h1> 
@@ -84,6 +84,6 @@ const Services = () => {
             
         </>
     )
-}
+});
 
 export default Services;

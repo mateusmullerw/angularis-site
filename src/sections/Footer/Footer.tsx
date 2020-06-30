@@ -6,13 +6,19 @@ import TwitterIcon from '@material-ui/icons/Twitter';
 import FacebookIcon from '@material-ui/icons/Facebook';
 
 const Footer = () => {
+
+    const openLink = (link: string) => {
+        window.open(link, '_blank')
+    }
+
+
     return(
         <>
             <div className="socialContact">
-                <LinkedInIcon fontSize="large" className="socialIcons__icon"/>
-                <InstagramIcon fontSize="large" className="socialIcons__icon"/>
-                <TwitterIcon fontSize="large" className="socialIcons__icon"/>
-                <FacebookIcon fontSize="large" className="socialIcons__icon"/>
+                <LinkedInIcon fontSize="large" className="socialIcons__icon" onClick={() => {openLink('https://www.linkedin.com/company/angularis-tech/')}}/>
+                <InstagramIcon fontSize="large" className="socialIcons__icon" onClick={() => {openLink('https://www.instagram.com/angularis.tech/')}}/>
+                <TwitterIcon fontSize="large" className="socialIcons__icon" onClick={() => {openLink('https://twitter.com/angularis_tech')}}/>
+                <FacebookIcon fontSize="large" className="socialIcons__icon" onClick={() => {openLink('https://www.facebook.com/angularis.tech')}}/>
             </div>
             <div className="footer">
 

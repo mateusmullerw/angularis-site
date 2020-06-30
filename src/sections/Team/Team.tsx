@@ -35,9 +35,9 @@ const responsive = {
     }
   };
 
-const Team = () => {
+const Team = React.forwardRef<HTMLDivElement>((props, ref) => {
     return (
-            <div className="team"> 
+            <div ref={ref} className="team" id="team"> 
 
                 <div className="team__carousel">
                     <Carousel responsive={responsive}>
@@ -147,6 +147,6 @@ const Team = () => {
                 <h1 className="team__title">NOSSO TIME</h1>
             </div>
     )
-}
+});
 
 export default Team;

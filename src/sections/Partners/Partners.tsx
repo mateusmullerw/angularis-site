@@ -4,11 +4,11 @@ import Exablack from '../../assets/exablack.png';
 import Ideplan from '../../assets/ideplan.png';
 import Nowee from '../../assets/nowee.png';
 
-const Partners = () => {
+const Partners = React.forwardRef<HTMLDivElement>((props, ref) => {
     return(
 
         <>
-            <div className="partners">
+            <div ref={ref} className="partners" id="parceiros">
 
                 <div className="partners__title">
                     <h1>Clientes e parceiros</h1>
@@ -35,6 +35,6 @@ const Partners = () => {
             </div>
         </>
     )
-}
+});
 
 export default Partners; 
