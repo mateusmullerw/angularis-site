@@ -36,20 +36,28 @@ const responsive = {
   };
 
 const Team = React.forwardRef<HTMLDivElement>((props, ref) => {
+
+    const Fade = require('react-reveal/Fade');
+
     return (
             <div ref={ref} className="team" id="team"> 
 
                 <div className="team__carousel">
                     <Carousel responsive={responsive}>
-                      <div className="team__carousel--item">
-                        <img src={LuizaC} alt="Luiza Cardoso" />
-                        <div className="team__carousel--item-detail">
-                              <h1>Luiza Cardoso</h1>
-                              <p>
-                                CEO e diretora comercial, toma conta da sua satisfação com os projetos ativamente do início ao fim
-                              </p>
+
+                      <Fade left>
+                        <div className="team__carousel--item">
+                          <img src={LuizaC} alt="Luiza Cardoso" />
+                          <div className="team__carousel--item-detail">
+                                <h1>Luiza Cardoso</h1>
+                                <p>
+                                  CEO e diretora comercial, toma conta da sua satisfação com os projetos ativamente do início ao fim
+                                </p>
+                          </div>
                         </div>
-                      </div>
+                      </Fade>
+
+                      <Fade left>
                       <div className="team__carousel--item" >
                         <img src={JP} alt="João Pedro" />
                         <div className="team__carousel--item-detail">
@@ -59,6 +67,9 @@ const Team = React.forwardRef<HTMLDivElement>((props, ref) => {
                               </p>
                         </div>
                       </div>
+                      </Fade>
+
+                      <Fade left>
                       <div  className="team__carousel--item" >
                         <img src={Tefa} alt="Estefani" />
                         <div className="team__carousel--item-detail">
@@ -68,6 +79,9 @@ const Team = React.forwardRef<HTMLDivElement>((props, ref) => {
                               </p>
                         </div>
                       </div>
+                      </Fade>
+
+                      <Fade left>
                       <div  className="team__carousel--item" >
                         <img src={Mateus} alt="Mateus" />
                         <div className="team__carousel--item-detail">
@@ -77,6 +91,8 @@ const Team = React.forwardRef<HTMLDivElement>((props, ref) => {
                               </p>
                         </div>
                       </div>
+                      </Fade>
+                      <Fade left>
                       <div  className="team__carousel--item" >
                         <img src={Gabriel} alt="Gabriel" />
                         <div className="team__carousel--item-detail">
@@ -86,6 +102,8 @@ const Team = React.forwardRef<HTMLDivElement>((props, ref) => {
                               </p>
                         </div>
                       </div>
+                      </Fade>
+                      <Fade left>
                       <div  className="team__carousel--item" >
                         <img src={Thiago} alt="Thiago" />
                         <div className="team__carousel--item-detail">
@@ -95,6 +113,8 @@ const Team = React.forwardRef<HTMLDivElement>((props, ref) => {
                               </p>
                         </div>
                       </div>
+                      </Fade>
+                      <Fade left>
                       <div  className="team__carousel--item" >
                         <img src={Cinthya} alt="Cinthya" />
                         <div className="team__carousel--item-detail">
@@ -104,6 +124,8 @@ const Team = React.forwardRef<HTMLDivElement>((props, ref) => {
                               </p>
                         </div>
                       </div>
+                      </Fade>
+                      <Fade left>
                       <div  className="team__carousel--item" >
                         <img src={Ana} alt="Ana Luiza" />
                         <div className="team__carousel--item-detail">
@@ -113,6 +135,8 @@ const Team = React.forwardRef<HTMLDivElement>((props, ref) => {
                               </p>
                         </div>
                       </div>
+                      </Fade>
+                      <Fade left>
                       <div className="team__carousel--item" >
                         <img src={Chaves} alt="Rodrigo" />
                         <div className="team__carousel--item-detail">
@@ -122,6 +146,8 @@ const Team = React.forwardRef<HTMLDivElement>((props, ref) => {
                               </p>
                         </div>
                       </div>
+                      </Fade>
+                      <Fade left>
                       <div  className="team__carousel--item" >
                         <img src={LuizaL} alt="Luiza L" />
                         <div className="team__carousel--item-detail">
@@ -131,6 +157,8 @@ const Team = React.forwardRef<HTMLDivElement>((props, ref) => {
                               </p>
                         </div>
                       </div>
+                      </Fade>
+                      <Fade left>
                       <div  className="team__carousel--item" >
                         <img src={Rosi} alt="Rosi" />
                         <div className="team__carousel--item-detail">
@@ -140,11 +168,14 @@ const Team = React.forwardRef<HTMLDivElement>((props, ref) => {
                               </p>
                         </div>
                       </div>
+                      </Fade>
                     </Carousel> 
                 </div>
 
-
-                <h1 className="team__title">NOSSO TIME</h1>
+                <Fade left>
+                 <h1 className="team__title">NOSSO TIME</h1>
+                </Fade>
+                
             </div>
     )
 });

@@ -64,7 +64,6 @@
             }
         }
     }
-
 }
 
 @media screen and (min-width: 720px) {
@@ -149,3 +148,12 @@
     }
 }
 
+
+@keyframes left_to_right {
+    from {
+      margin-left: -100%;
+    }
+    to {
+      margin-left: 20px;
+    }
+}

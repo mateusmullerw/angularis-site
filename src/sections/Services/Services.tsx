@@ -9,15 +9,21 @@ import DevIcon from '../../assets/icons/code_1x.png';
 
 
 const Services = React.forwardRef<HTMLDivElement>((props, ref) => {
+
+    const Fade = require('react-reveal/Fade');
+
     return (
         <>
         <div ref={ref} className="services" id="services"> 
+            <Fade left>
+                <div className="services__title">
+                    <h1 style={{color: '#FFFFFF' }}>Tudo que você precisa para sua </h1> 
+                    <h1 style={{color: '#F06F62' }} >transformação digital</h1>
+                </div>
+            </Fade>  
+            <Fade bottom cascade>
 
-            <div className="services__title">
-                <h1 style={{color: '#FFFFFF' }}>Tudo que você precisa para sua </h1> 
-                <h1 style={{color: '#F06F62', width: 0 }} >transformação digital</h1>
-            </div>
-
+           
             <div className="services__listContainer">
 
                 <div className="services__listContainer--item">
@@ -79,6 +85,7 @@ const Services = React.forwardRef<HTMLDivElement>((props, ref) => {
                 
 
             </div>
+            </Fade>
         </div>
 
             

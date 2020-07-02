@@ -7,6 +7,14 @@
     
         &__carousel {
             padding: 60px;
+
+            .react-multi-carousel-list  {
+                height: 800px;
+            }
+            
+            .react-multi-carousel-item {
+                transform-style: flat !important;
+            }
     
             &--item {
                 // width: 265px;
@@ -75,14 +83,6 @@
             font-size: 10rem;
         }
     }
-}
-
-.react-multi-carousel-list  {
-    height: 800px;
-}
-
-.react-multi-carousel-item {
-    transform-style: flat !important;
 }
 
 @-webkit-keyframes fadeIn {
