@@ -6,6 +6,7 @@
         background-position: center;
         background-repeat: no-repeat;
         background-size: cover;
+        justify-content: center;
     }
 
     .partners {
@@ -32,17 +33,17 @@
             flex-direction: column;
             align-items: center;
             justify-content: center;
-            padding: 0 25%;
+            padding: 0 20%;
             height: 100%;
             
             & img {
                 width: 200px;
-                padding: 10px;
+                padding: 30px;
             }    
 
             & p {
                 font-family: 'Lato';
-                font-size: 1.1rem;
+                font-size: 1.5rem;
                 padding: 0;
                 margin: 0;
                 text-align: center;
@@ -62,17 +63,39 @@
 
     .partners {
 
-        
+        &__item {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 0 2%;
+            height: 100%;
+            
+            & img {
+                width: 350px;
+                padding: 30px;
+            }    
+
+            & p {
+                font-family: 'Lato';
+                font-size: 1.5rem;
+                padding: 0;
+                margin: 0;
+                text-align: center;
+            }
+            
+            
+        }
     }
 
 }
 
 
-@media screen and (min-width: 800px) {
+@media screen and (min-width: 1024px) {
 
     .partnerContainer {
         display: flex;
-        flex-direction: row;
+        flex-flow: row nowrap;
         background: url('../../assets/parceiros.png') #4BA5AE;
         background-position: center;
         background-repeat: no-repeat;
@@ -83,16 +106,41 @@
     .partners {
         display: flex;
         flex-direction: row;
-        padding: 100px 100px;
+        padding: 100px 0;
 
         &__title {
             margin-left: 150px;
+            width: 50%;
             & h1 {
                 font-family: 'Oswald';
                 font-size: 5.3rem;
                 margin: 0;
                 padding: 0;
             }
+        }
+
+        &__item {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 0 2%;
+            height: 100%;
+            
+            & img {
+                width: 300px;
+                padding: 30px;
+            }    
+
+            & p {
+                font-family: 'Lato';
+                font-size: 1.5rem;
+                padding: 0;
+                margin: 0;
+                text-align: center;
+            }
+            
+            
         }
 
        
