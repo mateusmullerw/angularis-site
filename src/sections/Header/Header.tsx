@@ -43,16 +43,16 @@ const Header = (props: {black: boolean}) => {
                 (
                     <ul className="header__menu">
                         <Link to="services" spy={true} smooth={true} duration={500}>
-                            <li style={{color: props.black ? '#3C3B3B' : '#FFFFFF'}} className="header__menu--item">Serviços</li>
+                            <li style={{color: props.black ? '#000' : '#FFFFFF'}} className="header__menu--item">Serviços</li>
                         </Link>
                         <Link to="partners" spy={true} smooth={true} duration={500}>
-                            <li style={{color: props.black ? '#3C3B3B' : '#FFFFFF'}} className="header__menu--item">Parceiros</li>
+                            <li style={{color: props.black ? '#000' : '#FFFFFF'}} className="header__menu--item">Parceiros</li>
                         </Link>
                         <Link to="team" spy={true} smooth={true} duration={500}>
-                         <li style={{color: props.black ? '#3C3B3B' : '#FFFFFF'}} className="header__menu--item">Time</li>
+                         <li style={{color: props.black ? '#000' : '#FFFFFF'}} className="header__menu--item">Time</li>
                         </Link>
                         <Link to="contact" spy={true} smooth={true} duration={500}>
-                            <li style={{color: props.black ? '#3C3B3B' : '#FFFFFF'}} className="header__menu--item">Contato</li>
+                            <li style={{color: props.black ? '#000' : '#FFFFFF'}} className="header__menu--item">Contato</li>
                         </Link>
                         
                     </ul>
@@ -60,7 +60,7 @@ const Header = (props: {black: boolean}) => {
 
                 (
                     <div className="header__menu-mobile">
-                        <MenuIcon style={{color: '#FFF'}} id="btn-toggle" className="header__menu-mobile__icon" fontSize="large" onClick={toggleMenu} />
+                        <MenuIcon style={{color: props.black ? '#000' : '#FFFFFF'}} id="btn-toggle" className="header__menu-mobile__icon" fontSize="large" onClick={toggleMenu} />
                     </div>
                 )
                 
