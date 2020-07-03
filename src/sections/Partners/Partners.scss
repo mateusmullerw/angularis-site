@@ -1,14 +1,21 @@
 @media screen and (min-width: 0px) {
+    .partnerContainer {
+        display: flex;
+        flex-direction: column;
+        background: url('../../assets/parceiros.png') #4BA5AE;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+
     .partners {
         height: auto;
         background: url('../../assets/parceiros.png') #4BA5AE;
         background-position: center;
         background-repeat: no-repeat;
         background-size: cover;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
+        flex: 1 1 auto;
+
     
         &__title {
             margin: 25px;
@@ -20,24 +27,34 @@
             }
         }
     
-        &__list {
-            list-style: none;
-            margin: 25px;
-            padding:0;
-
-            &--item {
-                & img {
-                    width: 100px;
-                }    
-    
-                & p {
-                    font-family: 'Lato';
-                    font-size: 1.1rem;
-                    width: 90%;
-                }
+        &__item {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 0 25%;
+            height: 100%;
             
+            & img {
+                width: 200px;
+                padding: 10px;
+            }    
+
+            & p {
+                font-family: 'Lato';
+                font-size: 1.1rem;
+                padding: 0;
+                margin: 0;
+                text-align: center;
             }
+            
+            
         }
+    }
+
+    .carousel-container {
+        width: 90%;
+        padding-bottom: 50px;
     }
 }
 
@@ -45,19 +62,28 @@
 
     .partners {
 
-        &__list {
-            margin-left: 128px;
-        }
+        
     }
 
 }
 
 
 @media screen and (min-width: 800px) {
+
+    .partnerContainer {
+        display: flex;
+        flex-direction: row;
+        background: url('../../assets/parceiros.png') #4BA5AE;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+
+
     .partners {
         display: flex;
         flex-direction: row;
-        padding: 100px 150px;
+        padding: 100px 100px;
 
         &__title {
             margin-left: 150px;
@@ -70,6 +96,11 @@
         }
 
        
+    }
+
+    .carousel-container {
+        width: 60%;
+        padding-right: 100px;
     }
 
    
