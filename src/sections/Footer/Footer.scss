@@ -6,19 +6,19 @@
         width: 100%;
         margin-top: -36px;
         z-index: 1;
-    
+
         & svg {
             color: #3C3B3B;
             background: #F06F62;
             margin: 0 10px;
-            padding: 20px;
+            padding: 10px;
             border-radius: 50%;
             width: 32px;
             height: 32px;
             cursor: pointer;
         }
     }
-    
+
     .footer {
         background: #3C3B3B;
         display: flex;
@@ -26,28 +26,28 @@
         justify-content: center;
         align-items: center;
         padding: 20px 20px;
-    
+
         &__info {
             color: #ffffff;
-            
+
             & h5 {
                 font-family: 'Oswald';
                 font-size: 1.25rem;
             }
-    
+
             & p {
                 font-family: 'Lato';
                 font-size: 1rem;
                 width: 90%;
             }
         }
-    
+
         &__menu {
             list-style: none;
             color: #ffffff;
             font-family: 'Lato';
             padding: 0;
-    
+
             & li {
                 padding-bottom: 15px;
             }
@@ -69,6 +69,7 @@
     .socialContact {
 
         & svg {
+            padding: 20px;
             margin: 0 50px;
         }
     }
