@@ -1,3 +1,8 @@
+$white: #ffffff;
+$dark-gray: #3C3B3B;
+$green: #4BA5AE;
+$orange: #F06F62;
+
 .header {
     display: flex;
     flex-direction: row;
@@ -9,10 +14,11 @@
     position: fixed;
     top: 0;
     z-index: 999;
+    transition: all 300ms ease-in-out;
 
     &__logo {
-       position: relative;
-       left: 50px;
+        position: relative;
+        left: 50px;
     }
 
     &__menu {
@@ -22,20 +28,30 @@
         position: relative;
         right: 50px;
 
-        &--item {
-            font-family: 'Lato';
-            margin: 0 48px;
-            font-size: 1.25rem;
-            cursor: pointer;
+    }
+
+    &__menu-item {
+        font-family: 'Lato';
+        margin: 0 48px;
+        font-size: 1.25rem;
+        cursor: pointer;
+        color: $white;
+
+        &--black {
+            color: $dark-gray;
         }
-       
     }
 
     &__menu-mobile__icon {
         position: relative;
         right: 50px;
         cursor: pointer;
-       
+        color: $white;
+
+        &--black {
+            color: $dark-gray;
+        }
+
     }
 
 
@@ -53,8 +69,8 @@
         top: 100px;
         padding: 0;
 
-        & a > li {
-            font-family:'Lato';
+        & a>li {
+            font-family: 'Lato';
             font-size: 1.25rem;
             margin: 24px 0;
         }
@@ -70,5 +86,5 @@
     }
 
 
-   
+
 }

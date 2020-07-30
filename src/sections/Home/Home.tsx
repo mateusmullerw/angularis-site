@@ -1,4 +1,4 @@
-import React, { useEffect, useState, useRef  }  from 'react';
+import React, { useEffect, useState, useRef } from 'react';
 import BannerHero from '../BannerHero/BannerHero';
 import Services from '../Services/Services';
 import Partners from '../Partners/Partners';
@@ -10,7 +10,7 @@ import SocialIcons from '../../components/SocialIcons/SocialIcons';
 
 const Home = () => {
 
-    const [ changeColor, setChangeColor] = useState(true);
+    const [changeColor, setChangeColor] = useState(0);
 
     const bannerRef = React.createRef<HTMLDivElement>();
     const servicesRef = React.createRef<HTMLDivElement>();
@@ -19,19 +19,31 @@ const Home = () => {
     const contactRef = React.createRef<HTMLDivElement>();
 
 
-    
-    
+
+
     useEffect(() => {
         const listenScrollEvent = () => {
             if (servicesRef.current && partnersRef.current && teamRef.current && contactRef.current) {
-                if((servicesRef.current.offsetTop < window.scrollY && partnersRef.current.offsetTop > window.scrollY) || (teamRef.current.offsetTop < window.scrollY && contactRef.current.offsetTop > window.scrollY)){
-                    setChangeColor(false);
+                // if ((servicesRef.current.offsetTop < window.scrollY && partnersRef.current.offsetTop > window.scrollY) || (teamRef.current.offsetTop < window.scrollY && contactRef.current.offsetTop > window.scrollY)) {
+                //     setChangeColor(0);
+                // } else {
+                //     setChangeColor(1)
+                // }
+                if ((servicesRef.current.offsetTop < window.scrollY + 90 && partnersRef.current.offsetTop > window.scrollY + 90)) {
+                    setChangeColor(1);
+
+                } else if ((partnersRef.current.offsetTop < window.scrollY + 90 && teamRef.current.offsetTop > window.scrollY + 90)) {
+                    setChangeColor(2);
+                } else if ((teamRef.current.offsetTop < window.scrollY + 90 && contactRef.current.offsetTop > window.scrollY + 90)) {
+                    setChangeColor(3);
+                } else if (contactRef.current.offsetTop < window.scrollY + 90) {
+                    setChangeColor(4);
                 } else {
-                    setChangeColor(true)
+                    setChangeColor(0)
                 }
             }
 
-          
+
         }
         window.addEventListener('scroll', listenScrollEvent);
         listenScrollEvent();
@@ -39,17 +51,17 @@ const Home = () => {
     })
 
 
- 
 
-    return(
-        <div style={{overflowX: "hidden"}}>
-            <Header black={changeColor}/>
+
+    return (
+        <div style={{ overflowX: "hidden" }}>
+            <Header sectionColor={changeColor} />
             <BannerHero ref={bannerRef} />
-            <Services ref={servicesRef}/>
-            <Partners ref={partnersRef}/>
-            <Team ref={teamRef}/>
-            <Contact ref={contactRef}/>
-            <Footer/>
+            <Services ref={servicesRef} />
+            <Partners ref={partnersRef} />
+            <Team ref={teamRef} />
+            <Contact ref={contactRef} />
+            <Footer />
         </div>
     )
 }
