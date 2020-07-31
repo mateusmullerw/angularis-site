@@ -1,0 +1,25 @@
+.promo {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-flow: row wrap;
+    padding: 150px;
+
+    &_title1 {
+        font-family: 'Oswald';
+        font-size: 4.5rem;
+    }
+
+    &_subtitle {
+        font-family: 'Oswald';
+        font-size: 3rem;
+        font-weight: 600;
+        color: #F06F62;
+    }
+
+    &_discount {
+        font-family: 'Oswald';
+        font-size: 7.5rem;
+        font-weight: 600;
+    }
+}

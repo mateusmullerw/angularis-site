@@ -52,6 +52,9 @@ const Header = (props: { sectionColor: number }) => {
                             <Link to="partners" spy={true} smooth={true} duration={500}>
                                 <li className={`header__menu-item ${black && "header__menu-item--black"}`}>Parceiros</li>
                             </Link>
+                            <Link to="aboutus" spy={true} smooth={true} duration={500}>
+                                <li className={`header__menu-item ${black && "header__menu-item--black"}`}>Sobre nós</li>
+                            </Link>
                             <Link to="team" spy={true} smooth={true} duration={500}>
                                 <li className={`header__menu-item ${black && "header__menu-item--black"}`}>Time</li>
                             </Link>
@@ -82,6 +85,9 @@ const Header = (props: { sectionColor: number }) => {
                     </Link>
                     <Link to="partners" spy={true} smooth={true} duration={500}>
                         <li className="header__menu-mobile--item">Parceiros</li>
+                    </Link>
+                    <Link to="aboutus" spy={true} smooth={true} duration={500}>
+                        <li className="header__menu-mobile--item">Sobre nós</li>
                     </Link>
                     <Link to="team" spy={true} smooth={true} duration={500}>
                         <li className="header__menu-mobile--item">Time</li>
