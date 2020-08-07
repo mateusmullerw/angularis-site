@@ -29,19 +29,18 @@ const Partners = React.forwardRef<HTMLDivElement>((props, ref) => {
 
     return(
 
-        <div className="partnerContainer">
-            <div ref={ref} className="partners" id="parceiros">
+        <div  ref={ref}  className="partnerContainer" id="parceiros">
+            
 
-                <Fade left>
-                    <div className="partners__title">
-                        <h1>Clientes e parceiros</h1>
-                        <h1 style={{color: '#fff'}}>excelentes</h1>
-                        <h1>nos ajudam na trajetória</h1>
-                    </div>
-                </Fade>
+            <Fade left>
+                <div className="partners__title">
+                    <h1>Clientes e parceiros</h1>
+                    <h1 style={{color: '#fff'}}>excelentes</h1>
+                </div>
+            </Fade>
                
                
-            </div>
+
             <Carousel responsive={responsive} 
                     autoPlay 
                     infinite 

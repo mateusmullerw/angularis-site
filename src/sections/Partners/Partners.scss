@@ -10,16 +10,10 @@
     }
 
     .partners {
-        height: auto;
-        background: url('../../assets/parceiros.png') #4BA5AE;
-        background-position: center;
-        background-repeat: no-repeat;
-        background-size: cover;
-        flex: 1 1 auto;
-
+    
     
         &__title {
-            margin: 25px;
+            margin: 25px 75px;
             & h1 {
                 font-family: 'Oswald';
                 font-size: 3.3rem;
@@ -54,12 +48,17 @@
     }
 
     .carousel-container {
-        width: 90%;
+        width: 100%;
         padding-bottom: 50px;
     }
 }
 
 @media screen and (min-width: 700px) {
+
+
+    .partnerContainer {
+        padding: 100px 0;
+    }
 
     .partners {
 

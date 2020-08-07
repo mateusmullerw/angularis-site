@@ -11,7 +11,7 @@ const Promo = React.forwardRef<HTMLDivElement>((props, ref) => {
             <div>
                 <h1 className="promo_title1">PROGRAMA DE APOIO A </h1>
                 <p className="promo_subtitle">
-                    Mulheres empreendedoras 
+                    Mulheres empreendedoras e
                     <br/>
                     Pequenas empresas
                 </p>

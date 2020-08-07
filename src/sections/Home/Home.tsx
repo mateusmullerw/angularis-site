@@ -36,8 +36,8 @@ const Home = () => {
                     setChangeColor(3);
                 } else if ((promoRef.current.offsetTop < window.scrollY + 90 && promoRef.current.offsetTop > window.scrollY + 90)) {
                     setChangeColor(2);
-                } else if (contactRef.current.offsetTop < window.scrollY + 90) {
-                    setChangeColor(5);
+                } else if (contactRef.current.offsetTop < window.scrollY + 90 && contactRef.current.offsetTop > window.scrollY + 90)  {
+                    setChangeColor(4);
                 } else {
                     setChangeColor(0)
                 }

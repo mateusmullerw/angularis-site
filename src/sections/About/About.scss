@@ -1,7 +1,7 @@
 @media screen and (min-width: 0px){
     .about {
         background: #3C3B3B;
-        padding:20px;
+        padding: 20px 20px 145px 20px;
         display: flex;
         flex-flow: row wrap;
         justify-content: space-evenly;
@@ -48,7 +48,7 @@
 @media screen and (min-width: 720px){
     .about {
         background: #3C3B3B;
-        padding: 100px 100px 0 100px;
+        padding: 20px 30px 20px 30px;
         display: flex;
         flex-flow: row wrap;
         justify-content: space-evenly;
@@ -60,7 +60,7 @@
         }
     
         &__group1 {
-            margin-right: 85px;
+            margin-right: 10px;
             margin-bottom: 85px;
         }
     

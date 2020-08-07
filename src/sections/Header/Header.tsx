@@ -20,6 +20,7 @@ const Header = (props: { sectionColor: number }) => {
     const logo = headerItemsBlack[props.sectionColor] ? LogoPreto : LogoBranco
 
     useEffect(() => {
+        console.log(backgroundColor);
         const updateWidth = () => {
             if (rootRef.current) {
                 setMobile(rootRef.current.offsetWidth < 950 ? true : false)
@@ -28,15 +29,19 @@ const Header = (props: { sectionColor: number }) => {
         window.addEventListener('resize', updateWidth);
         updateWidth();
         return () => window.removeEventListener('resize', updateWidth);
-    }, []);
+
+       
+    }, [backgroundColor]);
 
     const toggleMenu = () => {
         setOpen((open) => !open);
     }
 
+    
+
     return (
         <React.Fragment>
-            <div className="header" style={{ backgroundColor: backgroundColor }} ref={rootRef}>
+            <div className="header" style={{ backgroundColor: backgroundColor}} ref={rootRef}>
                 <Link to="banner" spy={true} smooth={true} duration={500}>
                     <img className="header__logo" src={logo} alt="Logo" />
                 </Link>
