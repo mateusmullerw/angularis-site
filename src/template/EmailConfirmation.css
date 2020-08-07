@@ -1,0 +1,19 @@
+body {
+    align-items: center;
+    color: #3C3B3B;
+    display: flex;
+    flex-direction: column;
+    font-family: 'Oswald';
+    justify-content: center;
+
+}
+
+section {
+    background: #F06F62;
+    height: 100vh;
+    padding: 100px; 
+}
+
+p {
+    font-size: 2rem;
+}
