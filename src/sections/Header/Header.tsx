@@ -20,7 +20,6 @@ const Header = (props: { sectionColor: number }) => {
     const logo = headerItemsBlack[props.sectionColor] ? LogoPreto : LogoBranco
 
     useEffect(() => {
-        console.log(backgroundColor);
         const updateWidth = () => {
             if (rootRef.current) {
                 setMobile(rootRef.current.offsetWidth < 950 ? true : false)

@@ -40,3 +40,16 @@
         padding: 10px 0px !important;
     }
 }
+
+.confirm {
+    font-family: 'Oswald';
+    background: rgba(65,165,174,0.6);
+    padding: 10px;
+    color: #fff;
+    border-radius: 3px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 50px;
+    margin-bottom: 1.6rem;
+}
