@@ -4,6 +4,7 @@ import LinkedInIcon from '@material-ui/icons/LinkedIn';
 import InstagramIcon from '@material-ui/icons/Instagram';
 import TwitterIcon from '@material-ui/icons/Twitter';
 import FacebookIcon from '@material-ui/icons/Facebook';
+import TiktokIcon from '../../assets/icons/tiktok.svg';
 
 const Footer = () => {
 
@@ -19,6 +20,7 @@ const Footer = () => {
                 <InstagramIcon fontSize="large" className="socialIcons__icon" onClick={() => {openLink('https://www.instagram.com/angularis.tech/')}}/>
                 <TwitterIcon fontSize="large" className="socialIcons__icon" onClick={() => {openLink('https://twitter.com/angularis_tech')}}/>
                 <FacebookIcon fontSize="large" className="socialIcons__icon" onClick={() => {openLink('https://www.facebook.com/angularis.tech')}}/>
+                <img className="socialIcons__icon" src={TiktokIcon} onClick={() => {openLink('https://www.tiktok.com/@angularis.tech')}}/>
             </div>
             <div className="footer">
 
