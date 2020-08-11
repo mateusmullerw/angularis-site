@@ -8,6 +8,7 @@ import Contact from '../Contact/Contact';
 import Promo from '../Promo/Promo';
 import Footer from '../Footer/Footer'
 import Header from '../Header/Header';
+import Products from '../Products/Products';
 
 
 const Home = () => {
@@ -59,6 +60,7 @@ const Home = () => {
             <BannerHero ref={bannerRef} />
             <Services ref={servicesRef} />
             <Partners ref={partnersRef} />
+            <Products/>
             <About ref={aboutUsRef}/>
             <Team ref={teamRef} />
             <Promo ref={promoRef}/>
