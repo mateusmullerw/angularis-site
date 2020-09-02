@@ -2,6 +2,7 @@ import React from 'react';
 import './BannerHero.scss';
 import BannerImage from '../../assets/bannertrasparent.png';
 import Typing from 'react-typing-animation';
+import classes from '*.module.css';
 
 const BannerHero = React.forwardRef<HTMLDivElement>((props, ref) => {
 
@@ -22,7 +23,9 @@ const BannerHero = React.forwardRef<HTMLDivElement>((props, ref) => {
                 
         
             <Fade right>
+                <div className="bannerHero__image-container">
                 <img className="bannerHero__image" src={BannerImage}  />
+                </div>
             </Fade>
             
         </div>
