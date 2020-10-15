@@ -14,9 +14,6 @@ const About = () => {
           desenvolvimento e suporte.
         </p>
       </div>
-      <div className="clients" id="clients">
-        <h2 className="clients__title">Clientes e parceiros</h2>
-      </div>
     </Container>
   );
 };

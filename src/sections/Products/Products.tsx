@@ -8,7 +8,7 @@ import WebPlatformIcon from "../../components/Icons/WebPlatformIcon";
 
 const Products = () => {
   return (
-    <div className="products">
+    <div className="products" id="products">
       <div className="products__grid">
         <ProductCard label="Aplicativos">
           <AppIcon />

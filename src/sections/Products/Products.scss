@@ -8,10 +8,6 @@
     justify-content: center;
     margin-bottom: calc(-11.4512rem - 1px);
     &__grid {
-      // position: relative;
-      // top: -10rem;
-      // transform: translateY(-10rem);
-      // bottom: calc(-3.4375rem - 1px);
       padding: 0 1rem;
       display: grid;
       grid-template-columns: repeat(2, minmax(2rem, 1fr));

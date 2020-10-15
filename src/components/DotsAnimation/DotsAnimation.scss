@@ -1,0 +1,9 @@
+@import "theme";
+
+.dots-animation {
+  z-index: -1;
+  position: absolute;
+  top: 100vh;
+  background-color: $gray-background;
+  width: 100%;
+}

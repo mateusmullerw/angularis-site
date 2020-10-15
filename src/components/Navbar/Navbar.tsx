@@ -7,7 +7,7 @@ import isMobile from "../../utils/useIsMobile";
 import MenuIcon from "../../components/Icons/MenuIcon";
 import CloseIcon from "../../components/Icons/CloseIcon";
 import IconButton from "../IconButton/IconButton";
-import scrollTo from "../../utils/useScrollTo";
+import scrollTo from "../../utils/scrollTo";
 
 interface ILogoProps extends React.ImgHTMLAttributes<HTMLImageElement> {
   logo: string;
