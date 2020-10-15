@@ -1,0 +1,24 @@
+@import "theme";
+
+.product-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 0.1875rem;
+  border: 1px solid $outline;
+  overflow: hidden;
+
+  &__icon {
+    width: 13rem;
+    background-color: $product-card-bg;
+    padding: 2.5rem 3.4rem;
+  }
+  &__label {
+    margin: 0;
+    width: 100%;
+    padding: 1rem 0.5rem;
+    color: $text-primary;
+    background-color: $white;
+    text-align: center;
+  }
+}

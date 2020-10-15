@@ -1,23 +1,30 @@
-import './Products.scss'; 
-import React from 'react'; 
-import Bonita from '../../assets/bonita.png';
-import Magento from '../../assets/magento.png';
-import Liferay from '../../assets/liferay.png';
+import React from "react";
+import "./Products.scss";
+import ProductCard from "../../components/ProductCard/ProductCard";
+import AppIcon from "../../components/Icons/AppIcon";
+import WebsiteIcon from "../../components/Icons/WebsiteIcon";
+import EcommerceIcon from "../../components/Icons/EcommerceIcon";
+import WebPlatformIcon from "../../components/Icons/WebPlatformIcon";
 
 const Products = () => {
-    return (
-       <section className="products">
-           <h1>Os produtos que você precisa para o desenvolvimento dos seus projetos</h1>
-
-           <div className="products__container">
-               <img style={{marginBottom: '-3%'}} src={Bonita}/>
-               <img src={Magento}/>
-               <img style={{marginBottom: '-3%'}} src={Liferay}/>
-           </div>
-
-       </section>
-    )
-}
-
+  return (
+    <div className="products">
+      <div className="products__grid">
+        <ProductCard label="Aplicativos">
+          <AppIcon />
+        </ProductCard>
+        <ProductCard label="Websites">
+          <WebsiteIcon />
+        </ProductCard>
+        <ProductCard label="Ecommerce">
+          <EcommerceIcon />
+        </ProductCard>
+        <ProductCard label="Plataforma web">
+          <WebPlatformIcon />
+        </ProductCard>
+      </div>
+    </div>
+  );
+};
 
 export default Products;
