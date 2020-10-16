@@ -1,0 +1,21 @@
+@import "theme";
+
+.icon {
+  fill: transparent;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+
+  &--product {
+    stroke-width: 1.2;
+    stroke: $product-icon;
+  }
+
+  &--service {
+    stroke-width: 1.9;
+    stroke: $service-icon-base;
+
+    &--acent {
+      stroke: $primary;
+    }
+  }
+}

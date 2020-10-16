@@ -8,6 +8,9 @@ import Clients from "./sections/Clients/Clients";
 import Services from "./sections/Services/Services";
 import DotsAnimation from "./components/DotsAnimation/DotsAnimation";
 import Discount from "./sections/Discount/Discount";
+import Team from "./sections/Team/Team";
+import Contact from "./sections/Contact/Contact";
+
 function App() {
   window.onbeforeunload = function () {
     window.scrollTo(0, 0);
@@ -22,6 +25,8 @@ function App() {
       <Clients />
       <Services />
       <Discount />
+      <Team />
+      <Contact />
     </div>
   );
 }

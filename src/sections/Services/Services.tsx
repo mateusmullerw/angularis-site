@@ -84,9 +84,10 @@ const Services = () => {
         <div className="services__content">
           <h3>Serviços</h3>
           <div className="services__service-grid">
-            {services.map((service) => {
+            {services.map((service, index) => {
               return (
                 <ServiceCard
+                  key={index}
                   title={service.title}
                   description={service.description}
                   icon={service.icon}
@@ -98,9 +99,10 @@ const Services = () => {
         <div className="services__content">
           <h3>Tecnologias</h3>
           <div className="services__tech-grid">
-            {technologies.map((tech) => {
+            {technologies.map((tech, index) => {
               return (
                 <TechCard
+                  key={index}
                   title={tech.title}
                   description={tech.description}
                   icon={tech.icon}

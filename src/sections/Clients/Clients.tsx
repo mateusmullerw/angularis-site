@@ -96,7 +96,11 @@ const Controller = (props: IControllerProps) => {
       </div>
       {clients.map((client, index) => {
         return (
-          <div className="controller__button" onClick={() => setActive(index)}>
+          <div
+            key={index}
+            className="controller__button"
+            onClick={() => setActive(index)}
+          >
             <img
               src={client.image}
               alt=""
