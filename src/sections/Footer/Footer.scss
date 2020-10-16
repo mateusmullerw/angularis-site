@@ -1,0 +1,66 @@
+@import "theme";
+@media screen and (min-width: 0px) {
+  .footer {
+    width: 100%;
+    padding: 5rem 1rem;
+    background-color: $dark-gray-background;
+    color: $white;
+
+    &__logo {
+      display: block;
+      height: 1.6rem;
+      margin-bottom: 1.5rem;
+    }
+
+    &__inner {
+      width: 100%;
+      max-width: 69rem;
+      display: flex;
+      flex-direction: column;
+    }
+    &__info {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: flex-start;
+      padding-bottom: 0.8rem;
+      text-align: center;
+      & p {
+        margin-bottom: 0.3rem;
+      }
+    }
+    &__social {
+      color: $text-secondary;
+      display: flex;
+      justify-content: flex-end;
+      align-items: flex-end;
+      height: 100%;
+      width: 100%;
+
+      &__item {
+        display: block;
+        padding: 0.8rem;
+        width: 3rem;
+        height: 3rem;
+        border-radius: 100rem;
+
+        &:hover {
+          background-color: $social-hover;
+        }
+      }
+    }
+  }
+}
+@media screen and (min-width: 500px) {
+  .footer {
+    &__inner {
+      flex-direction: row;
+    }
+    &__info {
+      align-items: flex-start;
+      padding-bottom: 0.8rem;
+      text-align: left;
+    }
+  }
+}

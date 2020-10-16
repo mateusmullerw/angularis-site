@@ -2,6 +2,7 @@ import React from "react";
 import "./Hero.scss";
 import hero from "assets/hero.jpg";
 import Button from "../../components/Button/Button";
+import scrollTo from "../../utils/scrollTo";
 
 const Hero = () => {
   return (
@@ -13,7 +14,12 @@ const Hero = () => {
           Somos seu parceiro digital para transformar sua visão do futuro em
           realidade
         </p>
-        <Button label="Solicitar orçamento" large secondary />
+        <Button
+          onClick={() => scrollTo("contact")}
+          label="Solicitar orçamento"
+          large
+          secondary
+        />
       </div>
     </div>
   );

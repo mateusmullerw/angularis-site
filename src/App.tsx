@@ -10,6 +10,7 @@ import DotsAnimation from "./components/DotsAnimation/DotsAnimation";
 import Discount from "./sections/Discount/Discount";
 import Team from "./sections/Team/Team";
 import Contact from "./sections/Contact/Contact";
+import Footer from "./sections/Footer/Footer";
 
 function App() {
   window.onbeforeunload = function () {
@@ -27,6 +28,7 @@ function App() {
       <Discount />
       <Team />
       <Contact />
+      <Footer />
     </div>
   );
 }

@@ -8,4 +8,9 @@
   border: 0;
   width: 3rem;
   height: 3rem;
+  border-radius: 100rem;
+  &:hover {
+    cursor: pointer;
+    background-color: $icon-button-hover;
+  }
 }

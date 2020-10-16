@@ -1,0 +1,13 @@
+@import "theme";
+
+.logo {
+  &--black {
+    fill: $text-primary;
+  }
+  &--primary {
+    fill: $primary;
+  }
+  &--white {
+    fill: $white;
+  }
+}

@@ -1,0 +1,36 @@
+@import "theme";
+
+.select {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  margin-bottom: 1rem;
+
+  &__field {
+    border: 1px solid $outline;
+    border-radius: 0px;
+    padding: 10px 15px;
+    font-size: 0.875rem;
+    font-weight: 400;
+    color: $text-primary;
+    margin-top: 0.3rem;
+  }
+  &__caption {
+    text-align: left;
+    font-size: 0.8125rem;
+    font-weight: 400;
+    color: $text-primary;
+    margin-top: 0.3rem;
+    margin-bottom: 0;
+  }
+  &--error {
+    color: $error;
+    .select__field {
+      border: 1px solid $error;
+      color: $error;
+    }
+    .select__caption {
+      color: $error;
+    }
+  }
+}

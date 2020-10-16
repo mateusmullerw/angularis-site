@@ -21,7 +21,8 @@
 
     &__logo {
       position: relative;
-      height: 1.5rem;
+      display: block;
+      height: 1rem;
       &:hover {
         cursor: pointer;
       }
@@ -123,7 +124,13 @@
     }
   }
 }
-
+@media screen and (min-width: 300px) {
+  .navbar {
+    &__logo {
+      height: 1.5rem;
+    }
+  }
+}
 @media screen and (min-width: 500px) {
   .navbar {
     padding: 0rem 3rem;

@@ -1,7 +1,7 @@
 import React from "react";
 import "./icon.scss";
 
-const MenuIcon = () => {
+const DesignIcon = () => {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
@@ -32,4 +32,4 @@ const MenuIcon = () => {
   );
 };
 
-export default MenuIcon;
+export default DesignIcon;

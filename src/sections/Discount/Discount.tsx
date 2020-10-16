@@ -2,6 +2,7 @@ import React from "react";
 import "./Discount.scss";
 import discount from "assets/discount.jpg";
 import Button from "../../components/Button/Button";
+import scrollTo from "../../utils/scrollTo";
 
 const Discount = () => {
   return (
@@ -14,7 +15,12 @@ const Discount = () => {
         <h3 className=" discount__subtitle--bottom">
           mulheres empreendedoras e pequenas empresas
         </h3>
-        <Button label="Entre em contato" large secondary />
+        <Button
+          onClick={() => scrollTo("contact")}
+          label="Entre em contato"
+          large
+          secondary
+        />
       </div>
     </div>
   );

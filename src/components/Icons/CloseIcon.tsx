@@ -3,7 +3,7 @@ import React from "react";
 interface IMenuProps {
   className?: string;
 }
-const MenuIcon = (props: IMenuProps) => {
+const CloseIcon = (props: IMenuProps) => {
   const { className } = props;
 
   return (
@@ -19,4 +19,4 @@ const MenuIcon = (props: IMenuProps) => {
   );
 };
 
-export default MenuIcon;
+export default CloseIcon;

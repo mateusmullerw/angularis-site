@@ -8,14 +8,15 @@
 
   &__field {
     border: 1px solid $outline;
-    border-radius: 3px;
-    padding: 10px 15px;
+    border-radius: 0px;
+    padding: 11px 15px;
     font-size: 0.875rem;
     font-weight: 400;
     color: $text-primary;
     margin-top: 0.3rem;
   }
   &__caption {
+    text-align: left;
     font-size: 0.8125rem;
     font-weight: 400;
     color: $text-primary;

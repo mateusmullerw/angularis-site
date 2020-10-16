@@ -1,21 +1,12 @@
 import React, { useState, useEffect } from "react";
 import "./Navbar.scss";
-import LogoPreto from "../../assets/preto.svg";
-import LogoBranco from "../../assets/branco.svg";
+import Logo from "../../components/Logo/Logo";
 import Container from "../Container/Container";
 import isMobile from "../../utils/useIsMobile";
 import MenuIcon from "../../components/Icons/MenuIcon";
 import CloseIcon from "../../components/Icons/CloseIcon";
 import IconButton from "../IconButton/IconButton";
 import scrollTo from "../../utils/scrollTo";
-
-interface ILogoProps extends React.ImgHTMLAttributes<HTMLImageElement> {
-  logo: string;
-}
-const Logo = (props: ILogoProps) => {
-  const { logo, ...rest } = props;
-  return <img className="navbar__logo" src={logo} alt="Logo" {...rest} />;
-};
 
 interface INavlinkProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
   label: string;
@@ -48,7 +39,7 @@ const Navbar = () => {
     };
   }, []);
 
-  const logo = colorNavbar || isMenuOpen ? LogoPreto : LogoBranco;
+  const logoColor = colorNavbar || isMenuOpen ? "primary" : "white";
   const SelectedMenuIcon = isMenuOpen ? CloseIcon : MenuIcon;
 
   const toggleMenu = () => {
@@ -105,7 +96,11 @@ const Navbar = () => {
                   );
                 })}
               </div>
-              <Logo logo={logo} onClick={() => scrollToSection("home")} />
+              <Logo
+                className="navbar__logo"
+                color={logoColor}
+                onClick={() => scrollToSection("home")}
+              />
               <IconButton onClick={toggleMenu}>
                 <SelectedMenuIcon
                   className={`navbar__icon ${
@@ -116,7 +111,11 @@ const Navbar = () => {
             </>
           ) : (
             <>
-              <Logo logo={logo} onClick={() => scrollToSection("home")} />
+              <Logo
+                className="navbar__logo"
+                color={logoColor}
+                onClick={() => scrollToSection("home")}
+              />
               <ul className="navbar__menu">
                 {navlinks.map((link, index) => {
                   return (
