@@ -3,11 +3,11 @@
   .clients {
     width: 100%;
     max-width: 43rem;
-    padding: 5rem 1rem 3rem;
+    padding: 5rem 1rem 4rem;
     text-align: center;
 
     &__title {
-      margin-bottom: 1.2rem;
+      // margin-bottom: 1.2rem;
     }
     &__content {
       width: 100%;
@@ -43,7 +43,7 @@
     }
   }
 
-  .controler {
+  .controller {
     position: relative;
     display: flex;
 
@@ -89,7 +89,7 @@
   }
 }
 @media screen and (min-width: 300px) {
-  .controler {
+  .controller {
     &__button {
       padding: 1rem;
       height: 6.75rem;
@@ -97,7 +97,7 @@
   }
 }
 @media screen and (min-width: 400px) {
-  .controler {
+  .controller {
     &__button {
       padding: 1.5rem;
       height: 8.75rem;
@@ -105,14 +105,14 @@
   }
 }
 @media screen and (min-width: 500px) {
-  .controler {
+  .controller {
     &__button {
       padding: 2rem;
     }
   }
 }
 @media screen and (min-width: 600px) {
-  .controler {
+  .controller {
     &__button {
       padding: 2.5rem;
     }

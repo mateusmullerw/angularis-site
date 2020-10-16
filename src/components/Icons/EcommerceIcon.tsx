@@ -1,18 +1,12 @@
 import React from "react";
 
-interface IMenuProps {
-  className?: string;
-}
-const EcommerceIcon = (props: IMenuProps) => {
-  const { className } = props;
-
+const EcommerceIcon = () => {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
       height="100%"
       width="100%"
       viewBox="0 0 80 80"
-      className={className ? className : ""}
     >
       <circle
         cx="33.9066"

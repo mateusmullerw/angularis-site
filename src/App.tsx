@@ -5,7 +5,9 @@ import Navbar from "./components/Navbar/Navbar";
 import "styles/app.scss";
 import Products from "./sections/Products/Products";
 import Clients from "./sections/Clients/Clients";
+import Services from "./sections/Services/Services";
 import DotsAnimation from "./components/DotsAnimation/DotsAnimation";
+import Discount from "./sections/Discount/Discount";
 function App() {
   window.onbeforeunload = function () {
     window.scrollTo(0, 0);
@@ -18,6 +20,8 @@ function App() {
       <Products />
       <About />
       <Clients />
+      <Services />
+      <Discount />
     </div>
   );
 }

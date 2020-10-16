@@ -1,0 +1,15 @@
+@import "theme";
+
+.about {
+  max-width: 43rem;
+  padding: 5rem 1rem 1rem;
+  text-align: center;
+
+  &__title {
+    margin-bottom: 1.2rem;
+  }
+  &__subtitle {
+    color: $text-secondary;
+    margin-bottom: 2rem;
+  }
+}

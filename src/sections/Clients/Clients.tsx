@@ -66,19 +66,19 @@ const Slide = (props: ISlideProps) => {
   );
 };
 
-interface IControlerProps {
+interface IControllerProps {
   currentSlide: number;
   slidesAmout: number;
   clients: Array<IClient>;
   setActive: Function;
 }
-const Controler = (props: IControlerProps) => {
+const Controller = (props: IControllerProps) => {
   const { currentSlide, slidesAmout, clients, setActive } = props;
 
   return (
-    <div className="controler">
+    <div className="controller">
       <div
-        className="controler__indicator"
+        className="controller__indicator"
         style={{
           width: `${100 / slidesAmout}%`,
           transform: `translateX(${100 * currentSlide}%)`,
@@ -96,12 +96,12 @@ const Controler = (props: IControlerProps) => {
       </div>
       {clients.map((client, index) => {
         return (
-          <div className="controler__button" onClick={() => setActive(index)}>
+          <div className="controller__button" onClick={() => setActive(index)}>
             <img
               src={client.image}
               alt=""
-              className={`controler__logo ${
-                currentSlide === index ? "controler__logo--active" : ""
+              className={`controller__logo ${
+                currentSlide === index ? "controller__logo--active" : ""
               }`}
             />
           </div>
@@ -147,7 +147,7 @@ const Clients = () => {
               })}
             </div>
           </div>
-          <Controler
+          <Controller
             currentSlide={active}
             clients={clients}
             slidesAmout={clients.length}

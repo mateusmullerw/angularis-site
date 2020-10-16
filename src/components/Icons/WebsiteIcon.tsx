@@ -1,18 +1,12 @@
 import React from "react";
 
-interface IMenuProps {
-  className?: string;
-}
-const WebsiteIcon = (props: IMenuProps) => {
-  const { className } = props;
-
+const WebsiteIcon = () => {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
       height="100%"
       width="100%"
       viewBox="0 0 80 80"
-      className={className ? className : ""}
     >
       <path
         d="M23.5754 55.8007C24.6799 55.8007 25.5754 54.9053 25.5754 53.8007V36.5678V18.335C25.5754 17.7827 26.0231 17.335 26.5754 17.335H72.6576C73.2099 17.335 73.6576 17.7827 73.6576 18.335V63.3487C73.6576 63.9009 73.2099 64.3487 72.6576 64.3487H7.3425C6.79021 64.3487 6.3425 63.9009 6.3425 63.3487V56.8007C6.3425 56.2484 6.79021 55.8007 7.3425 55.8007H23.5754Z"
