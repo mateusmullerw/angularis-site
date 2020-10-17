@@ -7,6 +7,9 @@ import MenuIcon from "../../components/Icons/MenuIcon";
 import CloseIcon from "../../components/Icons/CloseIcon";
 import IconButton from "../IconButton/IconButton";
 import scrollTo from "../../utils/scrollTo";
+import getSize from "../../utils/getSize";
+import getPosition from "../../utils/getPosition";
+import isLinkActive from "../../utils/isLinkActive";
 
 interface INavlinkProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
   label: string;
@@ -23,6 +26,69 @@ const Navlink = (props: INavlinkProps) => {
     </button>
   );
 };
+
+const NavlinkActiveIndicator = (props: {
+  navlinks: Array<{ label: string; to: string }>;
+}) => {
+  const navlinks = props.navlinks;
+  const [active, setActive] = useState(5);
+  const [width, setWidth] = useState(0);
+  const [position, setPosition] = useState(
+    getPosition(`navlink_${navlinks[0].to}`)
+  );
+
+  useEffect(() => {
+    window.addEventListener("scroll", () => {
+      isLinkActive("products") && setActive(0);
+      navlinks.forEach((link, index) => {
+        isLinkActive(link.to) && setActive(index);
+      });
+      isLinkActive("home") && setActive(5);
+    });
+    return () => {
+      window.removeEventListener("scroll", () => {});
+    };
+  });
+  useEffect(() => {
+    if (active < navlinks.length) {
+      setWidth(getSize(`navlink_${navlinks[active].to}`).width);
+      setPosition(getPosition(`navlink_${navlinks[active].to}`));
+    } else {
+      setWidth(0);
+      setPosition(getPosition(`navlink_${navlinks[0].to}`));
+    }
+  }, [active, navlinks]);
+
+  let style = {
+    width: `${width}px`,
+    left: `${position.left}px`,
+    top: `${position.bottom - 3}px`,
+  };
+  return <div style={style} className="navbar__avctive-indicator"></div>;
+};
+
+const navlinks = [
+  {
+    label: "Quem somos",
+    to: "about",
+  },
+  {
+    label: "Parceiros",
+    to: "clients",
+  },
+  {
+    label: "Serviços",
+    to: "services",
+  },
+  {
+    label: "Nosso time",
+    to: "team",
+  },
+  {
+    label: "Contato",
+    to: "contact",
+  },
+];
 
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -50,29 +116,6 @@ const Navbar = () => {
     scrollTo(section);
     setIsMenuOpen(false);
   };
-
-  const navlinks = [
-    {
-      label: "Quem somos",
-      to: "about",
-    },
-    {
-      label: "Parceiros",
-      to: "clients",
-    },
-    {
-      label: "Serviços",
-      to: "services",
-    },
-    {
-      label: "Nosso time",
-      to: "team",
-    },
-    {
-      label: "Contato",
-      to: "contact",
-    },
-  ];
 
   return (
     <div className={`navbar ${colorNavbar ? "navbar--white" : ""}`}>
@@ -119,9 +162,11 @@ const Navbar = () => {
                 onClick={() => scrollToSection("home")}
               />
               <ul className="navbar__menu">
+                <NavlinkActiveIndicator navlinks={navlinks} />
                 {navlinks.map((link, index) => {
                   return (
                     <Navlink
+                      id={`navlink_${link.to}`}
                       key={index}
                       label={link.label}
                       onClick={() => scrollToSection(link.to)}
