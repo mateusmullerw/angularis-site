@@ -56,12 +56,12 @@ const ContactForm = () => {
       .then((result) => {
         setSent(true);
         setIsLoading(false);
+        resetForm({});
       })
       .catch((err) => {
         setFailedSent(true);
         setIsLoading(false);
       });
-    resetForm({});
   };
 
   return (

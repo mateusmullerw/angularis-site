@@ -44,12 +44,12 @@ const team = [
     picture: Chaves,
   },
   {
-    name: "Rosi",
+    name: "Luiza Lessa",
     position: ["Gerente Admnistrativa"],
     picture: LuizaLessa,
   },
   {
-    name: "Luiza Lessa",
+    name: "Rosi",
     position: ["Analista de Sucesso do Cliente"],
     picture: Rosi,
   },
