@@ -37,16 +37,18 @@ const NavlinkActiveIndicator = (props: {
     getPosition(`navlink_${navlinks[0].to}`)
   );
 
-  useEffect(() => {
-    window.addEventListener("scroll", () => {
-      isLinkActive("products") && setActive(0);
-      navlinks.forEach((link, index) => {
-        isLinkActive(link.to) && setActive(index);
-      });
-      isLinkActive("home") && setActive(5);
+  const checkSections = () => {
+    isLinkActive("products") && setActive(0);
+    navlinks.forEach((link, index) => {
+      isLinkActive(link.to) && setActive(index);
     });
+    isLinkActive("home") && setActive(5);
+  };
+
+  useEffect(() => {
+    window.addEventListener("scroll", checkSections);
     return () => {
-      window.removeEventListener("scroll", () => {});
+      window.removeEventListener("scroll", checkSections);
     };
   });
   useEffect(() => {

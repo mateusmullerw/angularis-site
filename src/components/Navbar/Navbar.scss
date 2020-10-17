@@ -4,7 +4,7 @@
   .navbar {
     position: relative;
 
-    z-index: 900;
+    z-index: 1900;
     position: fixed;
     width: 100%;
     height: $navbar-height;
@@ -14,7 +14,6 @@
     border-bottom: 1px solid transparent;
 
     &__avctive-indicator {
-      z-index: 1100;
       position: absolute;
       height: 3px;
       background-color: $primary;
