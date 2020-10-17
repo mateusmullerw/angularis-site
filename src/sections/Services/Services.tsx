@@ -39,12 +39,12 @@ const services = [
   },
   {
     title: "UX e UI Design",
-    description: "Interfáceis amigáveis para você e seus usuários navegarem",
+    description: "Interfaces amigáveis para você e seus usuários navegarem.",
     icon: Design,
   },
   {
     title: "Testes e Performance",
-    description: "Garantem a qualidade do seu produto",
+    description: "Garantem a qualidade do seu produto.",
     icon: Performance,
   },
 ];
@@ -53,7 +53,7 @@ const technologies = [
   {
     title: "Power BI",
     description:
-      "Vizualize dados de forma interativa e tenha recursos de inteligência de negócios.",
+      "Visualize dados de forma interativa e tenha recursos de inteligência de negócios.",
     icon: Powerbi,
   },
   {

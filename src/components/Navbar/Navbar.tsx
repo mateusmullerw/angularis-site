@@ -97,6 +97,7 @@ const Navbar = () => {
                 })}
               </div>
               <Logo
+                href="#"
                 className="navbar__logo"
                 color={logoColor}
                 onClick={() => scrollToSection("home")}
@@ -112,6 +113,7 @@ const Navbar = () => {
           ) : (
             <>
               <Logo
+                href="#"
                 className="navbar__logo"
                 color={logoColor}
                 onClick={() => scrollToSection("home")}

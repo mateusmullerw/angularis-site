@@ -16,7 +16,7 @@ const Products = () => {
         <ProductCard label="Websites">
           <WebsiteIcon />
         </ProductCard>
-        <ProductCard label="Ecommerce">
+        <ProductCard label="E-commerce">
           <EcommerceIcon />
         </ProductCard>
         <ProductCard label="Plataforma web">

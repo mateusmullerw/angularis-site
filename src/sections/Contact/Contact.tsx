@@ -11,7 +11,7 @@ const Contact = () => {
           <div className="contact__column contact__column--left">
             <h2 className="contact__title">Contato</h2>
             <p className="subtitle--2 contact__subtitle">
-              Mande uma mensagem pra gente, em breve entraremos em contato.
+              Mande uma mensagem para gente, em breve entraremos em contato.
             </p>
             <p className="subtitle--2 contact__email">
               comercial@angularis.tech

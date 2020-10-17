@@ -36,7 +36,7 @@ const clients = [
     name: "Nowee",
     image: Nowee,
     description: [
-      "Desenvolvimento de plataforma paraescola de inglês online",
+      "Desenvolvimento de plataforma para escola de inglês online",
       "",
     ],
   },
