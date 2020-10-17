@@ -10,8 +10,8 @@ import SocialTiktok from "../../components/Icons/SocialTiktok";
 
 const social = [
   {
-    icon: SocialFacebook,
-    link: "https://www.facebook.com/angularis.tech",
+    icon: SocialLinkedin,
+    link: "https://www.linkedin.com/company/angularis-tech/",
   },
   {
     icon: SocialInstagram,
@@ -22,8 +22,8 @@ const social = [
     link: "https://twitter.com/angularis_tech",
   },
   {
-    icon: SocialLinkedin,
-    link: "https://www.linkedin.com/company/angularis-tech/",
+    icon: SocialFacebook,
+    link: "https://www.facebook.com/angularis.tech",
   },
   {
     icon: SocialTiktok,
