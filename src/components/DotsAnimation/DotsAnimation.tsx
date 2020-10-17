@@ -1,9 +1,13 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import "./DotsAnimation.scss";
 import getSize from "../../utils/getSize";
+import goMovie from "./animation.js";
+import isMobile from "../../utils/useIsMobile";
 
 const DotsAnimation = () => {
   const [height, setHeight] = useState(0);
+  const [showCanvas, setShowCanvas] = useState(false);
+  const canvasRef = useRef(null);
 
   useEffect(() => {
     calcHeight();
@@ -13,11 +17,15 @@ const DotsAnimation = () => {
     };
   });
 
-  function calcHeight() {
-    const products = document.getElementById("products");
+  useEffect(() => {
+    if (showCanvas) {
+      goMovie(document.getElementById("dots"), height);
+    }
+  }, [canvasRef, height, showCanvas]);
 
-    const negativeMargin =
-      products!.getBoundingClientRect().top - window.innerHeight;
+  function calcHeight() {
+    setShowCanvas(getSize("products").width > 850);
+    const negativeMargin = -184;
     setHeight(
       getSize("products").height +
         getSize("about").height +
@@ -27,7 +35,18 @@ const DotsAnimation = () => {
   }
 
   return (
-    <div className="dots-animation" style={{ height: `${height}px` }}></div>
+    <div className="dots-animation" style={{ height: `${height}px` }}>
+      {!isMobile() ? (
+        <canvas
+          ref={canvasRef}
+          id="dots"
+          width="100%"
+          height={`${height}px`}
+        ></canvas>
+      ) : (
+        ""
+      )}
+    </div>
   );
 };
 
