@@ -44,9 +44,10 @@ const Footer = () => {
             <p className="body--2">comercial@angularis.tech</p>
           </div>
           <div className="footer__social">
-            {social.map((rede) => {
+            {social.map((rede, index) => {
               return (
                 <a
+                  key={index}
                   href={rede.link}
                   target="blank"
                   className="footer__social__item"
