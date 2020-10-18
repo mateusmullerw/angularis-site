@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useRef } from "react";
 import "./DotsAnimation.scss";
 import getSize from "../../utils/getSize";
-import goMovie from "./animation.js";
+import Animation from "./animation";
 import isMobile from "../../utils/useIsMobile";
 
 const DotsAnimation = () => {
@@ -19,11 +19,11 @@ const DotsAnimation = () => {
 
   useEffect(() => {
     if (showCanvas) {
-      goMovie(document.getElementById("dots"), height);
+      Animation(document.getElementById("dots") as HTMLCanvasElement, height);
     }
   }, [canvasRef, height, showCanvas]);
 
-  function calcHeight() {
+  const calcHeight = () => {
     setShowCanvas(getSize("products").width > 850);
     const negativeMargin = -184;
     setHeight(
@@ -32,7 +32,7 @@ const DotsAnimation = () => {
         getSize("clients").height +
         negativeMargin
     );
-  }
+  };
 
   return (
     <div className="dots-animation" style={{ height: `${height}px` }}>
@@ -40,8 +40,8 @@ const DotsAnimation = () => {
         <canvas
           ref={canvasRef}
           id="dots"
-          width="100%"
-          height={`${height}px`}
+          width={`100%`}
+          height={`100%`}
         ></canvas>
       ) : (
         ""
