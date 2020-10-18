@@ -68,7 +68,7 @@ const getRandomPosition = (width: number, height: number) => {
 };
 
 const renderBalls = (ctx: CanvasRenderingContext2D) => {
-  Array.prototype.forEach.call(ballArray, (node) => {
+  ballArray.forEach((node) => {
     ctx.fillStyle = `rgba(${ball.color.r},${ball.color.g},${ball.color.b},${node.alpha})`;
     ctx.beginPath();
     ctx.arc(
