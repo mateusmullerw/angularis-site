@@ -38,7 +38,7 @@ const NavlinkActiveIndicator = (props: {
   );
 
   const checkSections = () => {
-    isLinkActive("products") && setActive(0);
+    isLinkActive("about") && setActive(0);
     navlinks.forEach((link, index) => {
       isLinkActive(link.to) && setActive(index);
     });
@@ -72,7 +72,7 @@ const NavlinkActiveIndicator = (props: {
 const navlinks = [
   {
     label: "Quem somos",
-    to: "about",
+    to: "products",
   },
   {
     label: "Parceiros",
