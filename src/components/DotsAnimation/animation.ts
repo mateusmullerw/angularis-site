@@ -96,7 +96,7 @@ const updateBalls = (width: number, height: number) => {
     if (node.position.x < -margin || node.position.x > width + margin) {
       node.speed.x = -node.speed.x;
     }
-    if (node.position.y < -margin && node.position.y > height + margin) {
+    if (node.position.y < -margin || node.position.y > height + margin) {
       node.speed.y = -node.speed.y;
     }
     updatedArray.push(node);
